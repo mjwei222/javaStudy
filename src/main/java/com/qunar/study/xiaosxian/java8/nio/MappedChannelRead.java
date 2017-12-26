@@ -11,7 +11,7 @@ public class MappedChannelRead {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		try (FileChannel fchan = (FileChannel) Files.newByteChannel(Paths.get("D:\\work\\201711\\2017-11.txt"));) {
+		try (FileChannel fchan = (FileChannel) Files.newByteChannel(Paths.get("/home/jianweimu/document/201712"));) {
 			long fsize = fchan.size();
 			MappedByteBuffer mBuf = fchan.map(FileChannel.MapMode.READ_ONLY, 0, fsize);
 			for (int i = 0; i < fsize; i++)
