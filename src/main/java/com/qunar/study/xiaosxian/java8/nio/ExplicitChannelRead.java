@@ -13,6 +13,7 @@ public class ExplicitChannelRead {
 		// TODO Auto-generated method stub
 		int count;
 		try (SeekableByteChannel fChan = Files.newByteChannel(Paths.get("D:\\work\\201711\\2017-11.txt"))) {
+		//try (SeekableByteChannel fChan = Files.newByteChannel(Paths.get("/home/jianweimu/document/201712"))) {
 			ByteBuffer mBuf = ByteBuffer.allocate(128);
 			do {
 				count = fChan.read(mBuf);
